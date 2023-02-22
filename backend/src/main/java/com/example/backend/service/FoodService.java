@@ -16,4 +16,9 @@ public class FoodService {
     public List<Food> listFood(){
         return foodRepository.listFood();
     }
+
+    public Food addFood(Food foodToAdd){
+        foodRepository.addFood(foodToAdd);
+        return foodToAdd;
+    }
 }

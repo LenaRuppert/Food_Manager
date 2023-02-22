@@ -16,4 +16,9 @@ public class FoodRepository {
         return foodList;
     }
 
+    public Food addFood(Food foodToAdd){
+        foodList.add(foodToAdd);
+        return foodToAdd;
+    }
+
 }

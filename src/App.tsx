@@ -1,24 +1,36 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Food} from "./model/Food";
+import axios from "axios";
+import FoodGallery from "./component/FoodGallery";
+import FoodCard from "./component/FoodCard";
 
 function App() {
+
+  const [food, setFood] = useState<Food[]>([])
+
+    function loadFood(){
+      axios.get("/api/food")
+          .then((response) => {
+              console.log(response.data)
+              setFood(response.data)
+          })
+          .catch((error) => {
+              console.error(error)
+          })
+    }
+
+    useEffect(() => {
+        loadFood()
+    }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <p>hello</p>
+        <FoodGallery food={food}/>
+
     </div>
   );
 }
