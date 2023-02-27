@@ -13,7 +13,6 @@ function App() {
     function loadFood(){
       axios.get("/api/food")
           .then((response) => {
-              console.log(response.data)
               setFood(response.data)
           })
           .catch((error) => {

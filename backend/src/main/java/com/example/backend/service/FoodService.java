@@ -11,14 +11,21 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FoodService {
 
-    public final FoodRepository foodRepository;
+    private final FoodRepository foodRepository;
+
+    private final IdService idService;
+
 
     public List<Food> listFood(){
         return foodRepository.listFood();
     }
 
     public Food addFood(Food foodToAdd){
-        foodRepository.addFood(foodToAdd);
-        return foodToAdd;
+        Food newFood = new Food(
+                idService.generateId(),
+                foodToAdd.name()
+        );
+        return foodRepository.addFood(newFood);
+
     }
 }
