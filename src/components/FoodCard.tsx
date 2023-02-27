@@ -1,5 +1,6 @@
 import React from "react";
 import {Food} from "../model/Food";
+import "./FoodCard.css";
 
 type FoodCardProps = {
 
@@ -9,8 +10,8 @@ type FoodCardProps = {
 export default function FoodCard(props: FoodCardProps){
 
     return (
-        <section>
+        <div className={"food-card"}>
             <h2>{props.food.name}</h2>
-        </section>
+        </div>
     )
 }

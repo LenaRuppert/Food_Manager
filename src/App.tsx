@@ -3,8 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import {Food} from "./model/Food";
 import axios from "axios";
-import FoodGallery from "./component/FoodGallery";
-import FoodCard from "./component/FoodCard";
+import FoodGallery from "./components/FoodGallery";
+import FoodCard from "./components/FoodCard";
+import Header from "./components/Header";
+import AddFood from "./components/AddFood";
 
 function App() {
 
@@ -26,9 +28,9 @@ function App() {
 
   return (
     <div className="App">
-
-        <p>hello</p>
+        <Header />
         <FoodGallery food={food}/>
+        <AddFood />
 
     </div>
   );

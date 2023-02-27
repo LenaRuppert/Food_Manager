@@ -1,0 +1,9 @@
+.add-food {
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    text-align: center;
+    border: 2px solid black;
+    justify-content: center;
+}
