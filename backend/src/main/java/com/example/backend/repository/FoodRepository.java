@@ -23,4 +23,8 @@ public class FoodRepository {
         return foodToAdd;
     }
 
+    public void deleteFoodById(String id){
+        foodList.remove(id);
+    }
+
 }

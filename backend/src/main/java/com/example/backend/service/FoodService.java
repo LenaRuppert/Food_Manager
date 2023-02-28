@@ -30,5 +30,9 @@ public class FoodService {
 
     }
 
+    public void deleteFoodById(String id){
+        foodRepository.deleteFoodById(id);
+    }
+
 
 }
