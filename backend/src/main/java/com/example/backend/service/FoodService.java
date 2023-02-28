@@ -26,7 +26,9 @@ public class FoodService {
                 idService.generateId(),
                 foodToAdd.name()
         );
-        return foodRepository.addFood(newFood);
+        return foodRepository.addFood(foodToAdd);
 
     }
+
+
 }
