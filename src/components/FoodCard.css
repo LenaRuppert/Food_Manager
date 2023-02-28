@@ -1,0 +1,7 @@
+.food-card{
+    height: 80px;
+    width: 220px;
+    border: 2px solid black;
+    border-radius: 18px;
+    margin: 5px;
+}

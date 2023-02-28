@@ -4,16 +4,23 @@ import com.example.backend.model.Food;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
 public class FoodRepository {
 
-    public final List<Food> foodList;
+    public final List<Food> foodList = new ArrayList<>();
 
     public List<Food> listFood(){
         return foodList;
+    }
+
+    public Food addFood(Food foodToAdd){
+        foodList.add(foodToAdd);
+        return foodToAdd;
     }
 
 }

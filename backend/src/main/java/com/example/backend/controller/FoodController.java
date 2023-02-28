@@ -3,9 +3,7 @@ package com.example.backend.controller;
 import com.example.backend.model.Food;
 import com.example.backend.service.FoodService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,4 +17,8 @@ public class FoodController {
     public List<Food> listFood(){
         return foodService.listFood();
     }
+
+   @PostMapping("/food")
+    public Food addFood(@RequestBody Food food){ return foodService.addFood(food);}
+
 }

@@ -1,0 +1,10 @@
+.food-list{
+    display: flex;
+    min-height: 520px;
+    min-width: 240px;
+    border: 2px solid black;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
