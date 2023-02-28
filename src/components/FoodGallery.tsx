@@ -17,7 +17,6 @@ export default function FoodGallery(props: FoodGalleryProps){
 
     return (
         <div className={"food-list"}>
-            <p>Test</p>
             {foodCard}
         </div>
     )

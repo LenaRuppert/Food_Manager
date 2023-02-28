@@ -26,8 +26,8 @@ export default function AddFood(props: AddFoodProps) {
     return (
         <div className={"add-food"}>
             <form>
-                <input type="text" value={name} onChange={onChange} placeholder="new item"/>
-                <button onClick={onSave}>submit</button>
+                <input className={"input"} type="text" value={name} onChange={onChange} placeholder="new item"/>
+                <button className={"input-button"} onClick={onSave}>submit</button>
             </form>
         </div>
     )

@@ -6,4 +6,16 @@
     text-align: center;
     border: 2px solid black;
     justify-content: center;
+
+}
+
+.input{
+    width: 220px;
+    height: 35px;
+    text-align: center;
+}
+
+.input-button{
+    height: 39px;
+    background-color: white;
 }
