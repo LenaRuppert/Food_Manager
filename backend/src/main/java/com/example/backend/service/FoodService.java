@@ -2,13 +2,14 @@ package com.example.backend.service;
 
 import com.example.backend.model.Food;
 import com.example.backend.repository.FoodRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class FoodService {
 
     private final FoodRepository foodRepository;
