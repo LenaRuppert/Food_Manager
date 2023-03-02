@@ -17,7 +17,8 @@ export default function FoodCard(props: FoodCardProps){
 
     return (
         <div className={"food-card"}>
-            <h2>{props.food.name}</h2>
+            <h2 className={"food-card-fields"}>{props.food.name}</h2>
+            <p className={"food-card-fields"}>kcal/100g: {props.food.kcalPerHundredGrams}</p>
             <button className={"button-delete"} onClick={handleDelete}>delete</button>
         </div>
     )

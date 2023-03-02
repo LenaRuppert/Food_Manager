@@ -11,13 +11,21 @@ export default function AddFood(props: AddFoodProps) {
 
     const [foodToAdd, setFoodToAdd] = useState<Food>({
         id: "",
-        name: ""
+        name: "",
+        kcalPerHundredGrams: ""
     })
 
-    function onChange(event: ChangeEvent<HTMLInputElement>) {
+    function onChangeName(event: ChangeEvent<HTMLInputElement>) {
         setFoodToAdd({
             ...foodToAdd,
             name: event.target.value
+        })
+    }
+
+    function onChangeKcal(event: ChangeEvent<HTMLInputElement>){
+        setFoodToAdd({
+            ...foodToAdd,
+            kcalPerHundredGrams: event.target.value
         })
     }
 
@@ -26,14 +34,17 @@ export default function AddFood(props: AddFoodProps) {
         setFoodToAdd({
         ...foodToAdd,
         id: "",
-        name: ""})
+        name: "",
+        kcalPerHundredGrams: ""
+        })
     }
 
 
     return (
         <div className={"add-food"}>
             <form>
-                <input className={"input"} type="text" value={foodToAdd.name} onChange={onChange} placeholder="new item"/>
+                <input className={"input"} type="text" value={foodToAdd.name} onChange={onChangeName} placeholder="new item"/>
+                <input className={"input"} type="text" value={foodToAdd.kcalPerHundredGrams} onChange={onChangeKcal} placeholder="kcal/100g"/>
                 <button className={"input-button"} onClick={onSave}>submit</button>
             </form>
         </div>
