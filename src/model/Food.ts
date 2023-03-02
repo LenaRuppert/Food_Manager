@@ -5,5 +5,7 @@ export type Food = {
     name: string;
 
     kcalPerHundredGrams: number;
+
+    amountInGrams: number
 }
 

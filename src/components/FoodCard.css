@@ -1,6 +1,6 @@
 .food-card{
     height: 80px;
-    width: 360px;
+    width: 560px;
     border: 2px solid black;
     border-radius: 18px;
     margin: 15px;
@@ -11,6 +11,12 @@
 }
 
 .food-card-fields{
+    margin: auto;
+}
+
+.food-card-input-gram{
+    width: 120px;
+    height: 25px;
     margin: auto;
 }
 
