@@ -20,12 +20,22 @@ function App() {
             })
     }
 
-    function addFood(newFood: Food){
-        return axios.post("/api/food", newFood)
-            .then((response) => response.data)
-            .then(data => setFood(prevState => [...prevState, data]))
+    function addFood(foodToAdd: Food){
+        return axios.post("/api/food", foodToAdd)
+            .then(() => {
+                loadFood();
+            })
+            .catch((error) => {
+                console.error(error)
+            })
 
-            }
+    }
+
+    function deleteFood(id: string) {
+        axios.delete("/api/food/" + id)
+            .then(loadFood)
+            .catch(console.error)
+    }
 
 
     useEffect(() => {
@@ -35,7 +45,7 @@ function App() {
   return (
     <div className="App">
         <Header />
-        <FoodGallery food={food}/>
+        <FoodGallery food={food} deleteFood={deleteFood}/>
         <AddFood onAdd={addFood}/>
 
     </div>

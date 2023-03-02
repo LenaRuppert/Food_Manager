@@ -1,32 +1,39 @@
 import React, {ChangeEvent, useState} from "react";
 import "./AddFood.css";
-import {type} from "os";
 import {Food} from "../model/Food";
 
 type AddFoodProps = {
 
-    onAdd: (food: Food) => Promise<void>
+    onAdd: (foodToAdd: Food) => void
 }
 
 export default function AddFood(props: AddFoodProps) {
 
-    const [name, setName] = useState<string>("")
+    const [foodToAdd, setFoodToAdd] = useState<Food>({
+        id: "",
+        name: ""
+    })
 
-    function onChange(event: ChangeEvent<HTMLInputElement>){
-        setName(event.target.value)
+    function onChange(event: ChangeEvent<HTMLInputElement>) {
+        setFoodToAdd({
+            ...foodToAdd,
+            name: event.target.value
+        })
     }
 
     function onSave(){
-        const food: Food = {id: "", name}
-        props.onAdd(food)
-            .then(r => setName(""))
+        props.onAdd(foodToAdd)
+        setFoodToAdd({
+        ...foodToAdd,
+        id: "",
+        name: ""})
     }
 
 
     return (
         <div className={"add-food"}>
             <form>
-                <input className={"input"} type="text" value={name} onChange={onChange} placeholder="new item"/>
+                <input className={"input"} type="text" value={foodToAdd.name} onChange={onChange} placeholder="new item"/>
                 <button className={"input-button"} onClick={onSave}>submit</button>
             </form>
         </div>

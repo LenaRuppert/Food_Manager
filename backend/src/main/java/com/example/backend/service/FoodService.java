@@ -26,8 +26,12 @@ public class FoodService {
                 idService.generateId(),
                 foodToAdd.name()
         );
-        return foodRepository.addFood(foodToAdd);
+        return foodRepository.addFood(newFood);
 
+    }
+
+    public void deleteFoodById(String id){
+        foodRepository.deleteFoodById(id);
     }
 
 
