@@ -18,5 +18,7 @@
     width: 70px;
     height: 25px;
     margin: auto;
-    background-color: red;
+    border: solid 1px darkred;
+    color: darkred;
+    border-radius: 18px;
 }
