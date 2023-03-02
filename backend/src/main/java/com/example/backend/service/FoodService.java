@@ -25,7 +25,8 @@ public class FoodService {
         Food newFood = new Food(
                 idService.generateId(),
                 foodToAdd.name(),
-                foodToAdd.kcalPerHundredGrams()
+                foodToAdd.kcalPerHundredGrams(),
+                foodToAdd.amountInGrams()
         );
         return foodRepository.addFood(newFood);
 
