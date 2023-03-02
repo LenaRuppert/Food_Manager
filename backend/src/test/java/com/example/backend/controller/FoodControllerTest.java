@@ -50,4 +50,5 @@ class FoodControllerTest {
                 ))
                 .andExpect(jsonPath("$.id").isNotEmpty());
     }
+
 }
