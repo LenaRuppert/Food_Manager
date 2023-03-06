@@ -26,4 +26,9 @@ public class FoodController {
         foodService.deleteFoodById(id);
     }
 
+    @PutMapping("/food/{id}")
+    public Food updateFood(@PathVariable String id, @RequestBody Food foodToUpdate){
+        return foodService.updateFood(id, foodToUpdate);
+    }
+
 }

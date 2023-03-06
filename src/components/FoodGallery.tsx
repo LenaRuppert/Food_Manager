@@ -2,11 +2,13 @@ import React from "react";
 import {Food} from "../model/Food";
 import FoodCard from "./FoodCard";
 import "./FoodGallery.css"
+import AddFood from "./AddFood";
 
 type FoodGalleryProps = {
     food: Food[]
 
     deleteFood: (id: string) => void
+    addFood: (food: Food) => void
 }
 
 export default function FoodGallery(props: FoodGalleryProps) {
@@ -20,8 +22,11 @@ export default function FoodGallery(props: FoodGalleryProps) {
     })
 
     return (
+        <>
         <div className={"food-list"}>
             {foodCard}
         </div>
+    <AddFood onAdd={props.addFood}/>
+         </>
     )
 }
