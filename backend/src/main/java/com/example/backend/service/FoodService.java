@@ -36,5 +36,9 @@ public class FoodService {
         foodRepository.deleteFoodById(id);
     }
 
+    public Food updateFood(String id, Food foodToUpdate){
+        return foodRepository.updateFood(foodToUpdate);
+    }
+
 
 }

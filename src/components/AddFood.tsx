@@ -54,9 +54,11 @@ export default function AddFood(props: AddFoodProps) {
     return (
         <div className={"add-food"}>
             <form>
-                <input className={"input"} type="text" value={foodToAdd.name} onChange={onChangeName} placeholder="new item"/>
-                <input className={"input"} type="number" value={foodToAdd.kcalPerHundredGrams} onChange={onChangeKcal} placeholder="kcal/100g"/>
-                <input className={"input"} type="number" value={foodToAdd.amountInGrams} onChange={onChangeAmount} placeholder="Menge in Gramm"/>
+                <input className={"input-name"} type="text" value={foodToAdd.name} onChange={onChangeName} placeholder="neues Produkt"/>
+                <label>     kcal/100g: </label>
+                <input className={"input-kcal"} type="number" value={foodToAdd.kcalPerHundredGrams} onChange={onChangeKcal} placeholder="kcal/100g"/>
+                <label>     Menge in Gramm: </label>
+                <input className={"input-amount"} type="number" value={foodToAdd.amountInGrams} onChange={onChangeAmount} placeholder="Menge in Gramm"/>
                 <button className={"input-button"} onClick={onSave}>submit</button>
             </form>
         </div>

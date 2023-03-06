@@ -1,0 +1,8 @@
+.button-update{
+    width: 70px;
+    height: 25px;
+    margin: auto;
+    border: solid 1px darkred;
+    color: darkgreen;
+    border-radius: 18px;
+}

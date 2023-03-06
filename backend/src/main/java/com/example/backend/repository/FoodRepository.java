@@ -30,4 +30,9 @@ public class FoodRepository {
         foodList.remove(id);
     }
 
+    public Food updateFood(Food foodToUpdate){
+        foodList.put(foodToUpdate.id(), foodToUpdate);
+        return foodToUpdate;
+    }
+
 }

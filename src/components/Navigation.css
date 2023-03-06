@@ -1,0 +1,17 @@
+.nav a{
+    text-decoration: none;
+    font-family: "Comic Sans MS",sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    padding: 20px;
+}
+
+.nav li {
+    display: inline;
+    list-style-type: none;
+}
+
+.nav a:hover{
+    color: black;
+}

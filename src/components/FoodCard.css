@@ -1,6 +1,6 @@
 .food-card{
     height: 80px;
-    width: 560px;
+    width: 600px;
     border: 2px solid black;
     border-radius: 18px;
     margin: 15px;
@@ -26,5 +26,14 @@
     margin: auto;
     border: solid 1px darkred;
     color: darkred;
+    border-radius: 18px;
+}
+
+.button-update{
+    width: 70px;
+    height: 25px;
+    margin: auto;
+    border: solid 1px darkgreen;
+    color: green;
     border-radius: 18px;
 }
