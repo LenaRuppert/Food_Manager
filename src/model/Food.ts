@@ -7,5 +7,7 @@ export type Food = {
     kcalPerHundredGrams: number;
 
     amountInGrams: number
+
+    isFavorite: boolean
 }
 

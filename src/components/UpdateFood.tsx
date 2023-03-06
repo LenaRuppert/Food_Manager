@@ -17,7 +17,8 @@ export default function UpdateFood(props: UpdateFoodProps){
         id: id ? id : "",
         name: "",
         kcalPerHundredGrams: 0,
-        amountInGrams: 0
+        amountInGrams: 0,
+        isFavorite: false
     })
 
 
@@ -52,7 +53,8 @@ export default function UpdateFood(props: UpdateFoodProps){
             id: "",
             name: "",
             kcalPerHundredGrams: 0,
-            amountInGrams: 0
+            amountInGrams: 0,
+            isFavorite: false
         })
     }
 
