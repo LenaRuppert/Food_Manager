@@ -13,7 +13,8 @@ export default function AddFood(props: AddFoodProps) {
         id: "",
         name: "",
         kcalPerHundredGrams: 0,
-        amountInGrams: 0
+        amountInGrams: 0,
+        isFavorite: false
     })
 
     function onChangeName(event: ChangeEvent<HTMLInputElement>) {
@@ -46,7 +47,8 @@ export default function AddFood(props: AddFoodProps) {
         id: "",
         name: "",
         kcalPerHundredGrams: 0,
-            amountInGrams: 0
+            amountInGrams: 0,
+            isFavorite: false
         })
     }
 

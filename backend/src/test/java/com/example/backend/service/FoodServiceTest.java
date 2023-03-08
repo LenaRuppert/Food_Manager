@@ -34,7 +34,7 @@ class FoodServiceTest {
     void CheckListFood() {
         //GIVEN
         List<Food> expectedListOfFood = new ArrayList<>();
-        expectedListOfFood.add(new Food("1", "Milk", 3424, 34));
+        expectedListOfFood.add(new Food("1", "Milk", 3424, 34, false));
         when(foodRepository.listFood()).thenReturn(expectedListOfFood);
 
         //WHEN
@@ -48,7 +48,7 @@ class FoodServiceTest {
     @Test
     void checkAddFood(){
         //GIVEN
-        Food foodToAdd = new Food("1", "Milk", 2343, 23);
+        Food foodToAdd = new Food("1", "Milk", 2343, 23, false);
         when(idService.generateId()).thenReturn("1");
         when(foodRepository.addFood(foodToAdd)).thenReturn(foodToAdd);
 

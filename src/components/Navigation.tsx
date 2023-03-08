@@ -10,7 +10,7 @@ export default function Navigation(){
                     <NavLink to={"/"}>Homepage</NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/favoriten"}>Favoriten</NavLink>
+                    <NavLink to={"/food/favorites"}>Favoriten</NavLink>
                 </li>
                 <li>
                     <NavLink to={"/gerichte"}>Gerichte</NavLink>

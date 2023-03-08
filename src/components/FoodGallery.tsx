@@ -9,13 +9,15 @@ type FoodGalleryProps = {
 
     deleteFood: (id: string) => void
     addFood: (food: Food) => void
+
+    updateFood: (food: Food) => void
 }
 
 export default function FoodGallery(props: FoodGalleryProps) {
 
     const foodCard = props.food.map((food) => {
         return (
-            <FoodCard food={food} key={food.id} deleteFood={props.deleteFood}/>
+            <FoodCard food={food} key={food.id} deleteFood={props.deleteFood} updateFood={props.updateFood}/>
         )
 
 

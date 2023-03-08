@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useEffect, useState} from "react";
 import {Food} from "../model/Food";
 import {useParams} from "react-router-dom";
+import "./UpdateFood.css"
 
 
 
@@ -17,7 +18,8 @@ export default function UpdateFood(props: UpdateFoodProps){
         id: id ? id : "",
         name: "",
         kcalPerHundredGrams: 0,
-        amountInGrams: 0
+        amountInGrams: 0,
+        isFavorite: false
     })
 
 
@@ -52,13 +54,14 @@ export default function UpdateFood(props: UpdateFoodProps){
             id: "",
             name: "",
             kcalPerHundredGrams: 0,
-            amountInGrams: 0
+            amountInGrams: 0,
+            isFavorite: false
         })
     }
 
 
     return (
-        <div className={"add-food"}>
+        <div className={"update-food"}>
             <form>
                 <input className={"input-name"} type="text" value={foodToUpdate.name} onChange={onChangeName} placeholder="geändertes Produkt"/>
                 <label>     kcal/100g: </label>

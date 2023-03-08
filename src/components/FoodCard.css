@@ -37,3 +37,12 @@
     color: green;
     border-radius: 18px;
 }
+
+.button-favorite{
+    width: 70px;
+    height: 25px;
+    margin: auto;
+    border: solid 1px yellow;
+    color: black;
+    border-radius: 18px;
+}
