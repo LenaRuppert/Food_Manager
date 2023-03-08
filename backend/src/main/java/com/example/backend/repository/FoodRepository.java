@@ -1,6 +1,7 @@
 package com.example.backend.repository;
 
 import com.example.backend.model.Food;
+import com.example.backend.model.FoodDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
