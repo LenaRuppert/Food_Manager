@@ -1,8 +1,31 @@
-.button-update{
-    width: 70px;
+.update-food {
+   margin: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    text-align: center;
+    border: 2px solid black;
+    justify-content: center;
+
+}
+
+.input-name{
+    width: 220px;
     height: 25px;
-    margin: auto;
-    border: solid 1px darkred;
-    color: darkgreen;
-    border-radius: 18px;
+    text-align: center;
+}
+
+.input-kcal{
+    width: 50px;
+    height: 25px;
+}
+
+.input-amount{
+    width: 50px;
+    height: 25px;
+}
+
+.input-button{
+    height: 30px;
+    background-color: white;
 }

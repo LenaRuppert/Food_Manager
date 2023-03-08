@@ -5,8 +5,8 @@ import axios from "axios";
 import FoodGallery from "./components/FoodGallery";
 import Header from "./components/Header";
 import {Route, Router, Routes} from "react-router-dom";
-import Favorites from "./components/Favorites";
 import UpdateFood from "./components/UpdateFood";
+import Favorites from "./components/Favorites";
 
 
 function App() {
@@ -55,8 +55,8 @@ function App() {
         <div className="App">
             <Header/>
             <Routes>
-                <Route path={"/"} element={<FoodGallery food={food} deleteFood={deleteFood} addFood={addFood}/>}/>
-                <Route path={"/favoriten"} element={<Favorites/>}/>
+                <Route path={"/"} element={<FoodGallery food={food} deleteFood={deleteFood} addFood={addFood} updateFood={updateFood}/>}/>
+                <Route path={"/food/favorites"} element={<Favorites food={food} deleteFood={deleteFood} addFood={addFood} updateFood={updateFood}  />}/>
                 <Route path={"/food/update/:id"} element={<UpdateFood updateFood={updateFood}/>}/>
             </Routes>
         </div>
