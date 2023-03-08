@@ -1,6 +1,7 @@
 package com.example.backend.service;
 
 import com.example.backend.model.Food;
+import com.example.backend.model.FoodDTO;
 import com.example.backend.repository.FoodRepository;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ public class FoodService {
         return foodRepository.listFood();
     }
 
-    public Food addFood(Food foodToAdd){
+    public Food addFood(FoodDTO foodToAdd){
         Food newFood = new Food(
                 idService.generateId(),
                 foodToAdd.name(),
@@ -37,8 +38,9 @@ public class FoodService {
         foodRepository.deleteFoodById(id);
     }
 
-    public Food updateFood(String id, Food foodToUpdate){
-        return foodRepository.updateFood(foodToUpdate);
+    public Food updateFood(String id, FoodDTO foodToUpdate){
+        Food updatedFood = new Food(id, foodToUpdate.name(), foodToUpdate.kcalPerHundredGrams(), foodToUpdate.amountInGrams(), foodToUpdate.isFavorite());
+        return foodRepository.updateFood(updatedFood);
     }
 
 

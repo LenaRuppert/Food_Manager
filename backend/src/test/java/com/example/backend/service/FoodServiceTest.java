@@ -1,6 +1,7 @@
 package com.example.backend.service;
 
 import com.example.backend.model.Food;
+import com.example.backend.model.FoodDTO;
 import com.example.backend.repository.FoodRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +20,8 @@ class FoodServiceTest {
 
     FoodRepository foodRepository;
     IdService idService;
+
+    FoodDTO foodDTO;
 
     @BeforeEach
     public void setUp() {
@@ -48,12 +51,13 @@ class FoodServiceTest {
     @Test
     void checkAddFood(){
         //GIVEN
-        Food foodToAdd = new Food("1", "Milk", 2343, 23, false);
+        FoodDTO foodToAddDTO = new FoodDTO("Milk", 2343,23,false);
+        Food foodToAdd = new Food( "1", foodToAddDTO.name(), foodToAddDTO.kcalPerHundredGrams(), foodToAddDTO.amountInGrams(), foodToAddDTO.isFavorite());
         when(idService.generateId()).thenReturn("1");
         when(foodRepository.addFood(foodToAdd)).thenReturn(foodToAdd);
 
         //WHEN
-        Food foodExpected = foodService.addFood(foodToAdd);
+        Food foodExpected = foodService.addFood(foodToAddDTO);
 
         //THEN
         verify(foodRepository).addFood(foodToAdd);
